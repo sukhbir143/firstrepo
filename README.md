@@ -21,3 +21,12 @@ with sync_playwright() as p:
     click.click()
     filter_button = page.wait_for_selector("//span[@class='Alt-din-font filter-class-btn']")
     filter_button.click()
+
+        for i in elements:
+        print(i.text_content())
+    search = page.wait_for_selector('input[type="text"]')
+    search.type('Sangeetha')
+    click = page.wait_for_selector('a[class="client_link"]')
+    click.click()
+    filter_button = page.wait_for_selector("//span[@class='Alt-din-font filter-class-btn']")
+    filter_button.click()
