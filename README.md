@@ -11,3 +11,13 @@ with sync_playwright() as p:
     password.type('3e39e1')
     signin = page.wait_for_selector('button[type="button"]')
     signin.click()
+    elements = page.query_selector_all('h6')
+    print(len(elements))
+    for i in elements:
+        print(i.text_content())
+    search = page.wait_for_selector('input[type="text"]')
+    search.type('Sangeetha')
+    click = page.wait_for_selector('a[class="client_link"]')
+    click.click()
+    filter_button = page.wait_for_selector("//span[@class='Alt-din-font filter-class-btn']")
+    filter_button.click()
