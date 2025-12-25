@@ -30,3 +30,9 @@ with sync_playwright() as p:
     click.click()
     filter_button = page.wait_for_selector("//span[@class='Alt-din-font filter-class-btn']")
     filter_button.click()
+
+
+    class Car:
+      def __init__(self, brand, model)
+        self.brand = brand
+        self.model = model
